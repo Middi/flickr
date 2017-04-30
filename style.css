@@ -1,0 +1,14 @@
+html {
+    max-height: 100vh;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    background-position: no-repeat bottom center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
