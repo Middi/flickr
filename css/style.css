@@ -1,0 +1,190 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+a {
+  text-decoration: none; }
+
+input, select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+html {
+  font-size: 14px; }
+
+body {
+  font-family: 'Open Sans';
+  line-height: 1.2; }
+
+h1, h2, h3, h4 {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  color: #fbfbfb; }
+
+h1 {
+  font-size: 1.5em;
+  font-weight: 300; }
+
+h2 {
+  font-size: 2em;
+  margin-top: 8px; }
+
+h3 {
+  font-size: 1.2em;
+  font-weight: 400; }
+
+h4 {
+  font-size: 1.414em; }
+
+p {
+  color: #fbfbfb;
+  font-size: 0.7em;
+  font-weight: 600; }
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600; }
+
+a:hover {
+  text-decoration: underline; }
+
+small {
+  font-size: 0.707em; }
+
+strong {
+  font-weight: 700; }
+
+em {
+  font-style: italic; }
+
+.fa-heart {
+  font-size: 12px;
+  color: #fc2d23; }
+
+.large {
+  font-size: 40px; }
+
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 300; }
+  nav a:hover {
+    color: white; }
+
+.built {
+  color: white;
+  font-size: 0.9em;
+  padding: 4px;
+  font-weight: 300; }
+  .built strong {
+    font-weight: 400; }
+
+.built a, .built p {
+  font-size: 0.8rem;
+  transition: all 0.6s ease; }
+
+.built a:hover {
+  text-decoration: underline; }
+
+html {
+  height: 100%; }
+
+body {
+  position: relative;
+  height: 100%;
+  background-position: no-repeat bottom center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.bike {
+  background: #0c5dbe;
+  padding: 20px;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  border-radius: 4px;
+  width: 260px;
+  height: 148px;
+  text-align: center; }
+  .bike img {
+    width: 60px; }
+
+.clock {
+  width: 160px;
+  height: 160px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 6px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 0.7rem; }
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+  /* account for the height of the clock hands */ }
+
+.hand {
+  width: 50%;
+  height: 4px;
+  background: #fbfbfb;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); }
+
+.second-hand {
+  height: 2px;
+  background: red;
+  z-index: -1; }
+
+.hour-hand {
+  width: 45px;
+  right: 65px; }
+
+.logo-flickr {
+  position: absolute;
+  bottom: 8px;
+  right: 12px; }
+  .logo-flickr img {
+    width: 70px; }

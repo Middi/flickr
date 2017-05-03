@@ -1,0 +1,128 @@
+// --------------------------------------------------
+// Typography
+// --------------------------------------------------
+
+
+//--------------------------------
+// Sets Default Font Size
+//--------------------------------
+
+html {font-size: 14px}
+
+body {
+  font-family: 'Open Sans';
+  line-height: 1.2;
+}
+
+
+//--------------------------------
+// Headings
+//--------------------------------
+
+h1, h2, h3, h4 {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  color: $text;
+}
+
+h1 {
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 8px;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.414em;
+}
+
+p {
+  color: $text;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+//--------------------------------
+// Links
+//--------------------------------
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+//--------------------------------
+// Misc Tags
+//--------------------------------
+
+small {font-size: 0.707em}
+
+strong {font-weight: 700}
+
+em {font-style: italic;}
+
+span {}
+
+
+//--------------------------------
+// Icons
+//--------------------------------
+
+.fa-heart {
+	font-size: 12px;
+	color: #fc2d23;
+}
+
+.large {font-size: 40px}
+
+
+
+//--------------------------------
+// Nav Typography
+//--------------------------------
+
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 300;
+&:hover {color: white}
+}
+
+
+//--------------------------------
+// Footer Typography
+//--------------------------------
+
+
+.built {
+  color: white;
+	font-size: 0.9em;
+	padding: 4px;
+	font-weight: 300;
+	strong {font-weight: 400}
+}
+
+.built a, .built p{
+	font-size: 0.8rem;
+	transition: all 0.6s ease;
+}
+
+.built a:hover {text-decoration: underline}
+
+
+

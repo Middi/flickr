@@ -38,17 +38,126 @@ $(document).ready(function () {
 
     // ---- alternatively use public feed ---- //
 
-    $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?", {
-        tags: "oslo, night, city",
+    $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?", {
+        tags: "oslo",
         tagmode: "all",
         format: "json"
     },
-    function (data) {
+        function (data) {
 
-        var image = data.items[0].media.m;
-        var imageLarge = image.slice(0, -5) + 'h.jpg';
+            var image = data.items[0].media.m;
+            var imageLarge = image.slice(0, -5) + 'h.jpg';
 
-        document.body.background = imageLarge;
-    });
+            document.body.background = imageLarge;
+        });
 });
 
+
+// --- Bikes JS --- //
+
+
+$(document).ready(function () {
+    // pass in the location coords
+    function location(lat, lon) {
+
+        $.ajax({
+            type: 'GET',
+            url: 'https://cors-anywhere.herokuapp.com/https://oslobysykkel.no/api/v1/stations',
+            headers: {
+                'Client-Identifier': '9c15107665f894e8396aabad6c3ed366'
+            },
+            success: function (data) {
+                var check = data.stations.find(checkID);
+
+                $('#location1').html(check.title);
+
+                function checkID(response) {
+                    return response.id === 261;
+                }
+                console.log(check);
+            }
+        });
+
+        $.ajax({
+            type: 'GET',
+            url: 'https://cors-anywhere.herokuapp.com/https://oslobysykkel.no/api/v1/stations/availability',
+            headers: {
+                'Client-Identifier': '9c15107665f894e8396aabad6c3ed366'
+            },
+            success: function (data) {
+                var check = data.stations.find(checkID);
+
+                $('#available1').html("bikes available : " + check.availability.bikes);
+
+                function checkID(response) {
+                    return response.id === 261;
+                }
+                console.log(check);
+            }
+        });
+
+
+
+    }
+
+    //Get Latitude and Longitude
+
+    function success(pos) {
+        var crds = pos.coords
+
+        var lat = crds.latitude;
+        var lon = crds.longitude;
+
+        location(lat, lon);
+
+        console.log(lat);
+        console.log(lon);
+
+    }
+
+    function error(pos) {
+
+        var url = "https://ipinfo.io/geo";
+        $.getJSON(url, function (response) {
+
+            var loc = response.loc.split(',');
+            var lat = loc[0];
+            var lon = loc[1];
+
+            location(lat, lon);
+        });
+
+    }
+    navigator.geolocation.getCurrentPosition(success, error);
+
+
+
+
+    // ---- Clock JS ---- //
+
+    var secondHand = document.querySelector('.second-hand');
+var minsHand = document.querySelector('.min-hand');
+var hourHand = document.querySelector('.hour-hand');
+
+function setDate() {
+    var now = new Date();
+
+    var seconds = now.getSeconds();
+    var secondsDegrees = ((seconds / 60) * 360) + 90;
+    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+    var mins = now.getMinutes();
+    var minsDegrees = ((mins / 60) * 360) + 90;
+    minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+    var hour = now.getHours();
+    var hourDegrees = ((hour / 12) * 360) + 90;
+    hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+}
+
+setInterval(setDate, 1000);
+
+setDate();
+
+
+});
