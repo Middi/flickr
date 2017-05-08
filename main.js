@@ -39,7 +39,7 @@ $(document).ready(function () {
     // ---- alternatively use public feed ---- //
 
     $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?", {
-        tags: "oslo",
+        tags: "oslo, city",
         tagmode: "all",
         format: "json"
     },
@@ -135,7 +135,8 @@ $(document).ready(function () {
 
     // ---- Clock JS ---- //
 
-    var secondHand = document.querySelector('.second-hand');
+
+var secondHand = document.querySelector('.second-hand');
 var minsHand = document.querySelector('.min-hand');
 var hourHand = document.querySelector('.hour-hand');
 

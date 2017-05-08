@@ -16,7 +16,7 @@ body {
 }
 
 .bike {
-    background: rgba(12, 93, 190s, 1.0);
+    background: rgba(12, 93, 190, 1.0);
     padding: 20px;
     position: fixed;
     top: 16px;
@@ -72,11 +72,22 @@ body {
     width: 45px;
     right: 65px;
 }
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: $white;
+    position: absolute;
+    top: 49%;
+    transform: translateX(58px);
+    
+}
 
 .logo-flickr {
     position: absolute;
     bottom: 8px;
     right: 12px;
+    text-align: center;
     img {
         width: 70px;
     }
